@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String args[])  {
-        try {
+
             Scanner userInput = new Scanner(System.in);
             BankService bankService = new BankService();
 
@@ -23,6 +23,7 @@ public class Application {
 
             System.out.println("Enter the amount you want to withdraw: ");
 
+            try{
             bankService.authenticateTransaction(BankAccount.getAccountNumber());
 
 
@@ -30,8 +31,8 @@ public class Application {
 
             System.out.println("Enter the amount you want to deposit: ");
             bankService.depositCash(userInput.nextDouble());
-        } catch (IllegalTransactionException e) {
-            System.out.println("Unauthorized Transaction");
+            } catch (IllegalTransactionException e) {
+            System.out.println("Unauthorized Transaction : " + e);
         }
     }
 }
