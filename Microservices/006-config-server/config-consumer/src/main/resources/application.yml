@@ -1,0 +1,6 @@
+spring:
+  config:
+    cloud:
+      uri: http://localhost:8191
+  application:
+    name: membership
