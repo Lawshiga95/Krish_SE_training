@@ -3,12 +3,13 @@ package com.lawshiga.shoppingcloud.authorizationserver.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "user")
 @Data
-public class User {
+public class User implements Serializable {
 
     public User() {
     }
@@ -51,7 +52,8 @@ public class User {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "role_user", joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
-    inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
+        inverseJoinColumns = {
+            @JoinColumn(name = "role_id", referencedColumnName = "id")})
 
     private List<Role> roles;
 }

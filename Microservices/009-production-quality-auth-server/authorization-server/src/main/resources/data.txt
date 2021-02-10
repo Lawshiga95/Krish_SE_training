@@ -1,5 +1,3 @@
-
-
 INSERT INTO oauth_client_details (client_id, client_secret, web_server_redirect_uri, scope, access_token_validity, refresh_token_validity, resource_ids, authorized_grant_types, additional_information) VALUES ('mobile', '{bcrypt}$2a$10$gPhlXZfms0EpNHX0.HHptOhoFD1AoxSr/yUIdTqA8vtjeP4zi0DDu', 'http://localhost:8080/code', 'READ,WRITE', '3600', '10000', 'inventory,payment', 'authorization_code,password,refresh_token,implicit', '{}');
 
  INSERT INTO PERMISSION (NAME) VALUES
@@ -18,10 +16,10 @@ INSERT INTO oauth_client_details (client_id, client_secret, web_server_redirect_
      (4,1), /* delete admin */
      (2,2),  /* read operator */
      (3,2);  /* update operator */
-insert into user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('1', 'kate','{bcrypt}$2a$10$51yBUUBrFdj0YouzmnwdLOZzBW6Qn1BVzl.JDIPuiqzDIg9Xl3OpC', 'kate@gmail.com', '1', '1', '1', '1');
- insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('2', 'jane', '{bcrypt}$2a$10$NXHkX59ZDSs9P06cFfPwFuLe9Qvq8JQjz/npSJA1.beqzZh6YgEta','jane@gmail.com', '1', '1', '1', '1');
+insert into user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('1', 'jane','{bcrypt}$2a$10$SBaQSbIhkPqS10f3ADPeQu/jnc1c3ztwplNIKMv/Bv/sb58BvY79W', 'k@jane.com', '1', '1', '1', '1');
+ insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('2', 'kate', '{bcrypt}$2a$10$tdO50Emv/nPQxL8Zio8yje348SdGDP4DF2zSW2.TBnlnAJ4K1HnqC','k@kate.com', '1', '1', '1', '1');
 
 INSERT INTO ROLE_USER (ROLE_ID, USER_ID)
     VALUES
-    (1, 1) /* Jane-admin */,
-    (2, 2) /* Kate-operatorr */ ;
+    (1, 1) /* krish-admin */,
+    (2, 2) /* suranga-operatorr */ ;

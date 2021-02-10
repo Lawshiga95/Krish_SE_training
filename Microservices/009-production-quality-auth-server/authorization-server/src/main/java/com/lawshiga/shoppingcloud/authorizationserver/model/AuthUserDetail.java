@@ -14,9 +14,6 @@ public class AuthUserDetail extends User implements UserDetails {
         super(user);
     }
 
-    public AuthUserDetail() {
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
