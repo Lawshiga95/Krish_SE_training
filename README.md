@@ -1,1 +1,1 @@
-# LPTraining-Java
+# Java Training
